@@ -9,7 +9,7 @@ package com.usa.ingenieriarequerimientos.proyectotalleres.DTO;
  *
  * @author james
  */
-public class Usuario {
+public class Usuario implements Ubicación{
     private String nombreUsuario;
     private String apellidoUsuario;
     private String idUsuario;
@@ -104,6 +104,14 @@ public class Usuario {
 
     public void setLoginStatus(String loginStatus) {
         this.loginStatus = loginStatus;
+    }
+
+    @Override
+    public String mostrarUbicacion(String longitud, String latitud) {
+        System.out.println("Ubicación = "+"LAT:"+latitud+ "  LON:"+longitud);
+        String ubicacion= latitud+" "+longitud;
+        //Aca usaremos un splitter para separar la latitud, que es el primer dato, de la longitud.
+        return ubicacion;
     }
     
     

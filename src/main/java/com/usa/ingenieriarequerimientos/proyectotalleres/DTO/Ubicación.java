@@ -10,5 +10,5 @@ package com.usa.ingenieriarequerimientos.proyectotalleres.DTO;
  * @author james
  */
 public interface Ubicación {
-    public String locate(String longitud, String latitud);
+    public String mostrarUbicacion(String longitud, String latitud);
 }
